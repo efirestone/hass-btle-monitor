@@ -1,4 +1,4 @@
-FROM resin/armv7hf-debian:stretch
+FROM resin/rpi-raspbian:stretch
 
 # Build environment variables
 ENV MON_VER=0.1.675 \
