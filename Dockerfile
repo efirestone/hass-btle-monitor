@@ -36,3 +36,6 @@ ADD startup.sh /startup.sh
 # Install Monitor
 RUN ["chmod", "+x", "/startup.sh"]
 ENTRYPOINT ["/startup.sh"]
+
+# Annotate the mountable volume points
+VOLUME /config
