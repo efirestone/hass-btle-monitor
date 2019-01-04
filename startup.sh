@@ -6,8 +6,10 @@ if [ ! -e $FIRST_RUN_CHECK ]; then
     # YOUR_JUST_ONCE_LOGIC_HERE
     cd /
     git clone git://github.com/andrewjfreyer/monitor
-    chmod +x /monitor/monitor.sh
-    touch $FIRST_RUN_CHECK
+    if [ $? -eq 0 ]; then
+        chmod +x /monitor/monitor.sh
+	    touch $FIRST_RUN_CHECK
+    fi
 fi
 
 # Use volume-mounted config files if present.
